@@ -114,7 +114,7 @@ for i=1:N
                 T2(y,x,i)   =   T2s(minT);
                 
                 processed=processed+1;
-                waitbar(processed/total,WaitBar,sprintf('Minimization: %.5f %% complete...',round(processed/total,5)));
+                waitbar(processed/total,WaitBar,sprintf('Minimization: %.3f %% complete...',round(processed/total*100,3)));
                 
             else
                 W(y,x,i)    =   NaN;
