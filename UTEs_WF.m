@@ -79,7 +79,7 @@ f=w;
 Z = w;
 
 %%loop through each pixel
-for i=1%:N
+for i=1:N
 %per slice    
     for x=1:size(UTEs,1)
     %per column
@@ -145,7 +145,7 @@ function x = UTEsDictSumNorm(UTEs, dict, w, f)
     % per echo difference
     %warning('off', 'MATLAB:rankDeficientMatrix')
     dict=squeeze(dict);
-    d = UTEs - abs(dict*[w;f]);
+    d = (UTEs.^2 - abs(dict*[w;f]).^2).^(0.5);  %L2 norm
     x = abs(sum(d,1));
 end
           
