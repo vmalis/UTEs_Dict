@@ -10,9 +10,10 @@ function [Mask] = UTEsMask(Images,intensity_threshold)
 % OUTput: Mask [size = xres, yres, nslices]
 %
 %--------------------------------------------------------------------------
-% written by Vadim Malis
-% 04/20 at UCSD RIL
+% written by Vadim Malis (vmalis@ucsd.edu)
+% 04/20 at UCSD
 %==========================================================================
+
 thrsh = intensity_threshold;
 I = Images;
 

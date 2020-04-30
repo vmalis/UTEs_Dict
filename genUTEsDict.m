@@ -56,6 +56,9 @@ end
 
 %% fat
 function f = fat_spectrum(rho,freq,t)
+freq
+t
+freq.*t
    temp = rho.*exp(1i*2*pi*(freq.*t));
    f=sum(temp,1);
    f=f';
